@@ -16,7 +16,6 @@ public class Kata
     for (int x = 0; x < s.Length; x++)
     {
       bool flag = false;;
-      
       for (int y = 0; y < s.Length; y++)
       {
         if (g[x] == g[y] && x!=y)
@@ -24,17 +23,9 @@ public class Kata
           flag = true;
         }
       }
-      
       if (!flag)
         return s[x].ToString();
-      
     }
-    
-    
-    
     return "";
-    
-    
-    
   }
 }
