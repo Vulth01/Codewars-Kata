@@ -1,0 +1,16 @@
+using System;
+
+public class Kata
+{
+  public static bool IsIsogram(string str) 
+  {
+    str = str.ToLower();
+    for (int x = 0; x < str.Length; x++){
+      for (int y = 0; y < str.Length; y++){
+        if(str[x] == str[y] && x!=y) return false;   
+      }
+    }
+    
+    return true;
+  }
+}
