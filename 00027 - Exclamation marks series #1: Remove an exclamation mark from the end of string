@@ -1,0 +1,9 @@
+public class Kata
+{
+  public static string Remove(string s)
+  {
+    if (s[s.Length-1]=='!')
+      return s.Remove(s.Length-1,1);
+    return s;
+  }
+}
