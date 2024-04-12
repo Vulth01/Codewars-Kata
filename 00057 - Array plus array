@@ -1,0 +1,16 @@
+public static class Kata
+{
+  public static int ArrayPlusArray(int[] arr1, int[] arr2)
+  {
+    int sum = 0;
+    foreach (var i in arr1){
+      sum += i;
+    }
+    foreach (var i in arr2){
+      sum += i;
+    }
+    
+    
+    return sum;
+  }
+}
