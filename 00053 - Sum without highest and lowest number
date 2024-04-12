@@ -1,0 +1,23 @@
+using System;
+using System.Linq;
+
+public static class Kata
+{
+  public static int Sum(int[] numbers)
+  {
+    int sum = 0;
+    
+    if (numbers == null) return 0;
+    if (numbers.Length <= 1) return 0;
+    Array.Sort(numbers);
+    
+    for (int i = 1; i < numbers.Length - 1; i++)
+    {
+      sum += numbers[i];
+    }
+    return sum;
+    
+    
+    
+  }
+}
