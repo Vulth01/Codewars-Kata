@@ -1,0 +1,10 @@
+using System;
+using System.Linq;
+public class Kata
+{
+  public static int DeadAntCount(string ants)
+  {
+  	ants = ants?.Replace("ant", "") ?? "";    
+    return Math.Max(ants.Count(c => c == 'a'), Math.Max(ants.Count(c => c == 'n'),ants.Count(c => c == 't')));
+  }
+}
