@@ -1,0 +1,24 @@
+using System.Collections.Generic;
+using System;
+
+public class Kata
+{
+  public static Dictionary<char, int> Count(string str)
+  {
+    if(str == null) return null;
+    
+    var dic = new Dictionary<char, int>();
+    
+    for (int i = 0; i < str.Length; i++){
+      if (dic.ContainsKey(str[i])){
+        dic[str[i]]++;
+      }
+      else{
+        dic.Add(str[i], 1);
+      }
+    }
+    
+    return dic;
+    
+  }
+}
