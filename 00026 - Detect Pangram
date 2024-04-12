@@ -1,0 +1,16 @@
+using System;
+
+public static class Kata
+{
+  public static bool IsPangram(string str)
+  {
+      str = str.ToLower();
+
+      for (int i = 0; i < 26; i++) {
+        char c = Convert.ToChar(i + 97);
+        if (!str.Contains(c)) 
+          return false;
+      }
+      return true;
+  }
+}
