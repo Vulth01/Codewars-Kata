@@ -1,0 +1,9 @@
+public class Kata
+{
+  public static bool BetterThanAverage(int[] ClassPoints, int YourPoints)
+  {
+    int amount = 0;
+    foreach(var point in ClassPoints)amount+= point;
+    return YourPoints > amount/ClassPoints.Length ? true : false;  
+  }
+}
