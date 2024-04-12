@@ -1,0 +1,17 @@
+using System;
+
+public static class Kata
+{
+  public static int[] ReverseSeq(int n)
+  {
+    int[] nums = new int[n];
+    int i = 0;
+    while (n > 0){
+      nums[i] = n;
+      n--;
+      i++;
+    }
+    return nums;
+    
+  }
+}
