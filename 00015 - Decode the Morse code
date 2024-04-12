@@ -1,0 +1,12 @@
+using System;
+using System.Linq;
+
+class MorseCodeDecoder
+{
+	public static string Decode(string morseCode)
+	{
+		var words = morseCode.Trim().Split(new[] {"   "}, StringSplitOptions.None);
+    var translatedWords = words.Select(word => word.Split(' ')).Select(letters => string.Join("", letters.Select(MorseCode.Get))).ToList();
+    return string.Join(" ", translatedWords);
+	}
+}
