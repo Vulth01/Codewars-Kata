@@ -1,0 +1,27 @@
+using System;
+
+public class Kata
+{
+  public static int DuplicateCount(string str)
+  {
+    int counter = 0;
+    str = str.ToLower();
+    char[] c = str.ToCharArray();
+    Array.Sort(c);
+    str = new string(c);
+    
+    for(int i = 0; i < str.Length-1; i++){
+      if(c[i]==c[i+1]){
+        if(i < str.Length-2){
+          if(c[i]!=c[i+2] ){
+            counter++;
+          }                
+        }
+        else{
+          counter++;
+        }
+      }
+    }
+    return counter;
+  }
+}
