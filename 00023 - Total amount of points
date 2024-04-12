@@ -1,0 +1,15 @@
+using System.Linq;
+
+public static class Kata {
+    public static int TotalPoints(string[] games) {
+      
+      int count = 0;
+      foreach(var game in games){
+        if (game[0] == game[2]) count += 1;
+        else if (game[0] > game[2]) count += 3;
+        else if (game[0] < game[2]) count += 0;
+      }
+      
+      return count;
+    }
+}
