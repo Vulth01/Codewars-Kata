@@ -1,0 +1,50 @@
+using System;
+using System.Collections;
+using System.Linq;
+
+class AreTheySame
+{
+  public static bool comp(int[] a, int[] b)
+  {
+    // your code
+    
+    if(a==null || b == null){
+      return false;
+    }
+    
+    Array.Sort(a);
+    Array.Sort(b);
+    bool check = false;
+        
+    for (int i = 0; i < a.Length; i++){
+      if  (a[i] != 0 && b[i] != 0 && (b[i]) % a[i] != 0 && (a[i]) % b[i] != 0 ){
+        return false;
+      }           
+    }
+
+    if ((a.Length == 0 && b.Length == 0))
+      return true;
+
+    if (a.Length == 0 || b.Length == 0 || a == null || b == null)
+      return false;
+
+    if (a.Length != b.Length)
+      return false;
+
+      int countT = 0;
+
+    foreach (int i in b){
+      foreach(int j in a){
+        if (Math.Sqrt(i) == j){
+          check = true;
+          countT++;
+          break;
+        }
+      }
+      if (check == false)
+        return false;
+    }
+    return countT == b.Length ? true : false;
+
+  }
+}
