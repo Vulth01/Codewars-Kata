@@ -1,0 +1,11 @@
+public class Kata
+{
+  public static string OddOrEven(int[] array)
+  {
+    int sum = 0;
+    
+    foreach(int i in array) sum += i;
+    
+    return sum%2==0 ? "even" : "odd";
+  }
+}
