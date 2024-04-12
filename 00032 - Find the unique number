@@ -1,0 +1,21 @@
+using System.Collections.Generic;
+using System.Linq;
+
+public class Kata
+{
+  public static int GetUnique(IEnumerable<int> numbers)
+  {
+    int[] nums = numbers.ToArray();
+    
+    for(int i = 0; i < nums.Length - 1; i++){
+      if (nums[i] != nums[i+1]){
+        
+        if(i < nums.Length-2 && nums[i] != nums[i+2])
+          return nums[i];
+        else
+          return nums[i+1];
+      }
+    } 
+    return 0;
+  }
+}
