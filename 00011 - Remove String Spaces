@@ -1,0 +1,14 @@
+namespace Solution 
+{
+  public static class SpacesRemover
+  {
+    public static string NoSpace(string input)
+    {
+      string output = "";
+      foreach (var word in input.Split()){
+        output+= word;
+      }
+      return output;
+    }  
+  }
+}
