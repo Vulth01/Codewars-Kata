@@ -1,0 +1,26 @@
+using System;
+using System.Linq;
+using System.Text.RegularExpressions;
+
+public class Kata
+{
+  public static string PigIt(string str)
+  {
+    string[] words = str.Split(' ');
+    var charStr = str.ToCharArray();
+    string final = "";
+    
+    foreach (string word in words){
+      var result = string.Join("", word.Skip(1)) + word[0];
+      var cWord = result.ToCharArray();
+      
+      final += new string(cWord);
+
+      if(cWord.All(Char.IsLetter)){
+        final += "ay ";
+      }
+    }
+    
+    return final.Trim();
+  }
+}
