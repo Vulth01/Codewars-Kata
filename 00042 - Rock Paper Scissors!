@@ -1,0 +1,26 @@
+public class Kata
+{
+  public string Rps(string p1, string p2)
+  {
+    //ROCK > SCISSORS
+    if(p1 == "rock" && p2 == "scissors")
+      return "Player 1 won!";
+    if(p2 == "rock" && p1 == "scissors")
+      return "Player 2 won!";
+    
+    //PAPER < SCISSORS
+    if(p2 == "paper" && p1 == "scissors")
+      return "Player 1 won!";
+    if(p1 == "paper" && p2 == "scissors")
+      return "Player 2 won!";
+    
+    //PAPER > ROCK
+    if(p1 == "rock" && p2 == "paper")
+      return "Player 2 won!";
+    if(p2 == "rock" && p1 == "paper")
+      return "Player 1 won!";
+    
+    
+    return "Draw!";
+  }
+}
