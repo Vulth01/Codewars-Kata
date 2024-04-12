@@ -1,0 +1,12 @@
+public class Kata
+{
+  public static string Contamination(string text, string character)
+  {
+    if(text.Length<1 || character.Length<1) 
+      return "";
+    text.Trim();
+    char[] c = new char[text.Length];
+    for(int i = 0; i < text.Length; i++)c[i]= char.Parse(character);
+    return new string(c);    
+  }
+}
