@@ -1,0 +1,25 @@
+public static class Kata
+{
+	public static int sumTwoSmallestNumbers(int[] numbers)
+	{
+		//Code here...
+    int fLowest = 900;
+    int sLowest = 900;
+    
+    for (int i = 0; i < numbers.Length; i++)
+    {
+      if (numbers[i] < fLowest)
+      {
+          sLowest = fLowest;
+          fLowest = numbers[i];
+      }
+      else if (numbers[i] < sLowest)
+      {
+          sLowest = numbers[i];  
+      }
+    }
+      
+    return (fLowest + sLowest);
+    
+	}
+}
