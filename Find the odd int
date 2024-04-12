@@ -1,0 +1,28 @@
+namespace Solution
+{
+  class Kata
+    {
+    public static int find_it(int[] seq) 
+      {
+      
+      int Count = 0;
+      
+      for (int i = 0; i < seq.Length; i++)
+      {
+        int firstNum = seq[i];
+        for (int j = 0; j < seq.Length; j++)
+        {
+          if (firstNum == seq[j])
+          {
+            Count++;
+          }
+        }
+        if (Count % 2 != 0) 
+        {
+           return seq[i];
+        }
+      }
+      return -1;
+    }      
+  }
+}
