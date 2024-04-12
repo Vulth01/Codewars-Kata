@@ -1,0 +1,10 @@
+class AverageSolution
+{
+  public static double FindAverage(double[] array)
+  {
+    double total = 0;
+    foreach (var num in array)
+      total += num;
+    return total/array.Length;
+  }
+} 
