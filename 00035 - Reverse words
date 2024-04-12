@@ -1,0 +1,18 @@
+using System;
+
+public static class Kata
+{
+  public static string ReverseWords(string str)
+  {
+    string s = "";
+    string[] words = str.Split(' ');
+    
+    foreach(var word in words){
+      char[] ca = word.ToCharArray();
+      Array.Reverse(ca);
+      s += new String(ca) + " ";
+    }
+    
+    return s.Trim();
+  }
+}
