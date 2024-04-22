@@ -1,0 +1,39 @@
+using System;
+using System.Linq;
+using System.Text;
+
+public class Kata
+{
+  public static string High(string s)
+  {
+    // Declare return string
+    string result = "";
+    int highScore = 0;
+    
+    // Separate each word
+    var text = s;
+    var punctuation = text.Where(Char.IsPunctuation).Distinct().ToArray();
+    var words = text.Split().Select(x => x.Trim(punctuation));
+     
+    //Get score of word using ASCII (a = 97)
+    foreach (var word in words){
+      //total score of each word
+      int total = 0;
+      
+      foreach (char c in word){
+        total += (int)(c);
+        total -= 96;
+      }
+      
+    //Check for high score and replace
+      if (highScore < total){
+        highScore = total;
+        result = word;
+      }
+      
+    }
+    
+    
+    return result;
+  }
+}
