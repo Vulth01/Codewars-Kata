@@ -1,0 +1,13 @@
+using System;
+
+public static class Kata
+{
+  public static string Solution(string str) 
+  {
+    char[] word = str.ToCharArray();
+    Array.Reverse(word);
+    string reversed = new string(word);
+    
+    return (reversed);
+  }
+}
