@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+public class Kata
+{
+    public static int[] CountPositivesSumNegatives(int[] input)
+    {
+      if(input == null || input.Length<1) return Array.Empty<int>();
+      int p = 0;
+      int n = 0;
+      
+      foreach (int i in input)
+      {
+        if (i > 0) 
+          p+= 1;
+        else 
+          n+= i;
+      }
+      
+      int[] result = new int []{p, n};
+      return result;
+      
+    }
+}
