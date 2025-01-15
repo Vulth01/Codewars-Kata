@@ -1,0 +1,23 @@
+using System;
+using System.Collections.Generic;
+
+namespace Solution
+{
+  class Digitizer
+  {
+    public static long[] Digitize(long n)
+    {
+      char[] c = n.ToString().ToCharArray();
+      
+      Array.Reverse(c);
+      
+      long[] result = new long[c.Length];
+      
+      for(int i = 0; i < result.Length; i++){
+        result[i] = (c[i] - 48);                //Remove 48 due to codepoint. 
+      }
+      
+      return result;
+    }
+  }
+}
