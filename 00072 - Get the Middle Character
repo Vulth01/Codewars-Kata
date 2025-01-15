@@ -1,0 +1,31 @@
+public class Kata
+{
+  public static string GetMiddle(string s)
+  {
+    if(s.Length<=2) return s;                          
+    string result = s;                           
+    
+    
+    if(s.Length%2 == 1)                                 //Odd Number
+    {
+      int middle = s.Length/2;                 
+      char[] c = s.ToCharArray();             
+      char[] r = new char[1];                       
+      r[0] = c[middle];                              
+      result = new string(r);                         
+    }
+    else                                                //Even Number
+    {
+      int middle = (s.Length/2) - 1;          
+      char[] c = s.ToCharArray();             
+      char[] r = new char[2];           
+      r[0] = c[middle];                         
+      r[1] = c[middle+1];                            
+      result = new string(r);                   
+    }
+    
+    
+    return result;
+    
+  }
+}
