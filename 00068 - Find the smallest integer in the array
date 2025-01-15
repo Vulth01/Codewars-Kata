@@ -1,0 +1,11 @@
+public class Kata 
+{
+    public static int FindSmallestInt(int[] args) 
+    {
+      int smallest = 999999999;
+      foreach (int i in args){
+        if (i < smallest) smallest = i;
+      }
+      return smallest;
+    }
+}
