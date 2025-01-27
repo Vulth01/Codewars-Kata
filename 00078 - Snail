@@ -1,0 +1,52 @@
+public class SnailSolution
+{
+   public static int[] Snail(int[][] array)
+   {
+     
+      int n = array.Length;
+      var result = new int[array.Length * array[0].Length];
+      int x = 0;
+      int y = 0;
+      int count = 0;
+     
+     if (array.Length < 1) return null;
+     if (array.Length == 1) return array[0];
+     
+      while (n > 0) {
+        // travel right from top-left of spiral
+        for (int i = x; i < x + n; ++i){
+          result[count] = (array[y][i]);
+          count++;
+        } 
+        // shrink spiral and move top of spiral down
+        n--; y++;
+
+        // travel down from top-right of spiral
+        for (int i = y; i < y + n; ++i) {
+          result[count] = (array[i][x + n]);
+          count++;
+        };
+
+        // travel left from bottom-right of spiral
+        for (int i = x + n - 1; i >= x; --i){
+          result[count] = (array[y + n - 1][i]);
+            count++;
+        };
+
+        // shrink spiral
+        n--;
+
+        // travel up from bottom-left of spiral
+        for (int i = y + n - 1; i >= y; --i){
+           result[count] = (array[i][x]);
+           count++;
+        };
+
+        // move left of spiral right
+        x++;
+      }
+
+      return result;
+     
+   }
+}
